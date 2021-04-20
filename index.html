@@ -7,14 +7,15 @@
     <title>Help The Plant Grow</title>
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
     <link rel="stylesheet" href="CSS/style.css">
-    <script src="script.js" type="text/javascript" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="script.js" type="text/javascript" defer></script>    
 </head>
 <body>
 
   <!-- title screen -->
-  <div class="titleScreen" id="titleScreen">
+  <div class="titleScreen show" id="titleScreen">    
     <h1>Help the Plant Grow!</h1>
-    <button id="startBtn">Start</button>
+    <button id="startBtn">Start</button>    
   </div>
   
   <!-- Cloud formation -->
@@ -35,53 +36,14 @@
     </div>     
 
     <!-- Flower Pot -->
-    <div class="flower-Pot" id="flower-pot">
-        <div class="flower">
-            <div class="flower__head">
-              <div class="flower__eye left">
-                <span></span>
-              </div>
-              <div class="flower__nose"></div>
-              <div class="flower__eye right">
-                <span></span>
-              </div>
-            </div>
-            <!-- first stem growth -->
-            <div class="stem-leaf" id="1">
-                <div class="flower__leaf"></div>
-                <div class="flower__leaf--shadow">
-                </div>
-                <div class="flower__leaf oposite"></div>
-                <div class="flower__leaf--shadow oposite"></div>          
-                <div class="flower__stem"></div> 
-            </div>
-            <!-- second stem growth -->
-            <div class="stem-leaf" id="2">
-                <div class="flower__leaf"></div>
-                <div class="flower__leaf--shadow">
-                </div>
-                <div class="flower__leaf oposite"></div>
-                <div class="flower__leaf--shadow oposite"></div>          
-                <div class="flower__stem"></div> 
-            </div>
-            <!-- third stem growth -->
-            <div class="stem-leaf" id="3">
-                <div class="flower__leaf"></div>
-            <div class="flower__leaf--shadow">
-            </div>
-            <div class="flower__leaf oposite"></div>
-            <div class="flower__leaf--shadow oposite"></div>          
-            <div class="flower__stem"></div> 
-            </div>                  
-            <div class="flower__pot">
-              <div class="flower__pot--shadow"></div>
-              <div class="flower__pot--bottom"></div>
-            </div>
-          </div>
-    </div>    
+    <div class="player" id="player">
+      <div class="flower-pot"></div> 
+    </div> 
+
+
+    <div class="floor"></div>
+      
 
     
-    <!-- Jquery script -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </body>
 </html>
