@@ -88,6 +88,7 @@ body.game{
     transform: rotate(45deg);
     margin-top: 20px;
     background-image: linear-gradient(75deg, #fff, blue);
+    position: relative;
 }
 
 /* Flower and pot */
