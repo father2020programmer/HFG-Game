@@ -3,12 +3,14 @@
 }
 
 body{
-    margin: 0;
-    background-color: #87CEFF;
+    margin: 0;    
 }
 
-body.game{
-    cursor: none;
+.container {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #87CEFF;
 }
 
 /* Title Screen */
@@ -56,6 +58,24 @@ body.game{
     background-color: #fbe0c4;
 }
 
+/* score board */
+
+.score-board{
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: space-evenly;
+}
+
+.score-board div {
+    width: 300px;
+    height: 75px;
+    font-size: 2.5rem;
+    color: black;
+}
+
 
 /* Clouds */
 
@@ -94,7 +114,9 @@ body.game{
 /* Flower and pot */
 
 .player{
-    position: fixed;
+    position: absolute;
+    top: 500px;
+    left: 500px;
 }
 
 .flower-pot::after{
@@ -103,9 +125,9 @@ body.game{
     top: 50%;
     bottom: 50%;
     height: 25px;
-    width: 100px;    
+    width: 150px;    
     display: flex;
-    border-bottom:black 2px solid;
+    border-bottom:black 3px solid;
     background-color: chocolate;
       
 
@@ -117,8 +139,8 @@ body.game{
     top: 50%;
     left: 50.5%;
     height: 0;
-    width: 100px;
-    border-top: 100px solid chocolate;
+    width: 150px;
+    border-top: 125px solid chocolate;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
 }

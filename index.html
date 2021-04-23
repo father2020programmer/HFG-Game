@@ -8,14 +8,25 @@
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-    <script src="script.js" type="text/javascript" defer></script>    
+    <script src="script.js" type="text/javascript" defer></script>
+    <script src="variables.js" type="text/javascript" defer></script>  
+    <script src="functions.js" type="text/javascript" defer></script>    
+
 </head>
 <body>
 
+  <div class="container">
+
   <!-- title screen -->
-  <div class="titleScreen show" id="titleScreen">    
+  <div class="titleScreen" id="titleScreen">    
     <h1>Help the Plant Grow!</h1>
     <button id="startBtn">Start</button>    
+  </div>
+
+  <div class="score-board">
+    <div class="num-lives"></div>
+    <div class="score"></div>
+    <div class="levels"></div>
   </div>
   
   <!-- Cloud formation -->
@@ -42,6 +53,9 @@
 
 
     <div class="floor"></div>
+
+
+  </div>
       
 
     
