@@ -8,52 +8,37 @@
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-    <script src="script.js" type="text/javascript" defer></script>
+    <script src="jcanvas.min.js" defer></script>
     <script src="variables.js" type="text/javascript" defer></script>  
-    <script src="functions.js" type="text/javascript" defer></script>    
+    <script src="functions.js" type="text/javascript" defer></script>
+    <script src="script.js" type="text/javascript" defer></script>    
 
 </head>
 <body>
 
   <div class="container">
 
-  <!-- title screen -->
-  <div class="titleScreen" id="titleScreen">    
-    <h1>Help the Plant Grow!</h1>
-    <button id="startBtn">Start</button>    
-  </div>
+    <!-- title screen -->
+    <div class="titleScreen" id="titleScreen">    
+      <h1>Help the Plant Grow!</h1>
+      <button id="startBtn">Start</button>    
+    </div>
 
-  <div class="score-board">
-    <div class="num-lives"></div>
-    <div class="score"></div>
-    <div class="levels"></div>
-  </div>
+    <div class="score-board">
+      <div class="num-lives"></div>
+      <div class="score"></div>
+      <div class="levels"></div>
+    </div>
   
-  <!-- Cloud formation -->
-  <div class="clouds-group" id="clouds-group">
-    <div><i class="fas fa-cloud clouds"></i></div>
-    <div><i class="fas fa-cloud clouds"></i></div>
-    <div><i class="fas fa-cloud clouds"></i></div>
-    <div><i class="fas fa-cloud clouds"></i></div>
-  </div>    
-    
-
-    <!-- Water drops -->
-    <div class="water-drops" id="water-drops">
-        <div class="drop" id="1"></div>
-        <div class="drop" id="2"></div>
-        <div class="drop" id="3"></div>
-        <div class="drop" id="4"></div>
-    </div>     
-
-    <!-- Flower Pot -->
-    <div class="player" id="player">
-      <div class="flower-pot"></div> 
-    </div> 
-
-
-    <div class="floor"></div>
-
+    <!-- Cloud formation -->
+    <div class="clouds-group" id="clouds-group">
+      <div><i class="fas fa-cloud clouds"></i></div>
+      <div><i class="fas fa-cloud clouds"></i></div>
+      <div><i class="fas fa-cloud clouds"></i></div>
+      <div><i class="fas fa-cloud clouds"></i></div>
+    </div>   
+  
+    <canvas id="canvas" width="1000" height="1000"></canvas>  
 
   </div>
       
