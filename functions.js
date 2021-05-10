@@ -1,3 +1,18 @@
+for(let d=0; d<dropCount; d++){
+    drop[d] = {
+        xp: dropx[d],
+        yp: starty
+    }
+}
+
+$(document).keydown(function (e){
+    if(e.key === 'ArrowLeft' || e.key === 'a'){
+        playerX -= 15;
+    } else if(e.key === 'ArrowRight' || e.key === 'd'){
+        playerX += 15;
+    }
+});
+
 function drawFloor(){
     $(canvas).drawRect({
         fillStyle: 'black',
@@ -5,14 +20,6 @@ function drawFloor(){
         width: floorWidth,
         height: floorHeight,
     });
-}
-
-
-for(let d=0; d<dropCount; d++){
-    drop[d] = {
-        xp: dropx[d],
-        yp: starty
-    }
 }
 
 
@@ -98,26 +105,23 @@ function drawPlayer(){
     $(canvas).drawRect({
         fillStyle: '#ed9715',
         x: playerX, y: 860,
-        width: 70, height: 25 
+        width: playerWidth, height: 25 
     })
     $(canvas).drawRect({
         fillStyle: '#000',
         x: playerX, y: 875,
-        width: 70, height: 5 
+        width: playerWidth, height: 5 
     })
 }
 
-// function checkLevel(){
-//     if(level < )
-// }
-S
-function movePlayer(){
-    document.onkeypress =function (e) {
-        if(e.key == 39) {
-            playerX += 2;
-        } else if(e.key == 37){
-            playerX -= 2;
+function ifScored(){
+    let playerPos = playerX - 35;
+
+    for(let d=0; d<drop.length; d++){
+        if(drop[d].xp > playerPos && drop[d].xp < playerPos + playerWidth && drop[d].yp >835 && drop[d].yp < 840){
+            score += 1;
+            drop[d].yp = 1200;
         }
     }
+    
 }
-

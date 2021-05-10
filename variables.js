@@ -11,6 +11,7 @@ const dropCount = 4;
 const drop = [];
 const dropx = [175, 400, 610, 840];
 const starty = 230;
+const playerWidth = 70;
 
 let score = 0;
 let lives = 10;

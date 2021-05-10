@@ -4,11 +4,10 @@ $(() => {
         drawFloor();
         drawDrop1();
         drawDrop2();      
-        drawPlayer();
-        //movePlayer();
+        drawPlayer();        
+        ifScored();
     }
-
-    setInterval(draw, 10);
+    setInterval(draw, 16);
     
 })
 
