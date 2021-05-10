@@ -7,23 +7,86 @@ function drawFloor(){
     });
 }
 
-function drawDrop(){       
-    for(let i=0; i<dropx.length; i++){
-       $(canvas).drawEllipse({
-         fillStyle: '#1445d9',
-         x: dropx[i], y: dropy,
-         width: 8, height: 30,
-         });
+
+for(let d=0; d<dropCount; d++){
+    drop[d] = {
+        xp: dropx[d],
+        yp: starty
     }
 }
 
 
-function dropFall(){
-    if(dropy > 930){
-        dropy = 230;
-    } else{
-        dropy += 2;
-    }
+function drawDrop1(){
+    
+    $(canvas).drawEllipse({
+        fillStyle: '#1445d9',
+        x: drop[m1].xp, y: drop[m1].yp,
+        width: 8, height: 30,
+        });
+
+        let info = drop[m1].yp;
+
+        if(info > 940){
+            drop[m1].yp = starty;
+            m1 = Math.floor(Math.random() * 2);
+        } else{
+            drop[m1].yp += 2.5;
+        }           
+    
+}
+
+function drawDrop2(){
+    
+    $(canvas).drawEllipse({
+        fillStyle: '#1445d9',
+        x: drop[m2].xp, y: drop[m2].yp,
+        width: 8, height: 30,
+        });
+
+        let info = drop[m2].yp;
+
+        if(info > 940){
+            drop[m2].yp = starty;
+            m2 = Math.floor((Math.random() * 2) + 2);
+        } else{
+            drop[m2].yp += 2.3;
+        }
+    
+}
+
+function drawDrop3(){
+    
+    $(canvas).drawEllipse({
+        fillStyle: '#1445d9',
+        x: drop[m3].xp, y: drop[m3].yp,
+        width: 8, height: 30,
+        });
+
+        let info = drop[m3].yp;
+
+        if(info > 940){
+            drop[m3].yp = starty;
+        } else{
+            drop[m3].yp += 2.5;
+        }           
+    
+}
+
+function drawDrop4(){    
+    
+    $(canvas).drawEllipse({
+        fillStyle: '#1445d9',
+        x: drop[m4].xp, y: drop[m4].yp,
+        width: 8, height: 30,
+        });
+
+        let info = drop[m4].yp;
+
+        if(info > 940){
+            drop[m4].yp = starty;
+        } else{
+            drop[m4].yp += 2.5;
+        } 
 }
 
 function drawPlayer(){
@@ -44,8 +107,12 @@ function drawPlayer(){
     })
 }
 
+// function checkLevel(){
+//     if(level < )
+// }
+S
 function movePlayer(){
-    document.onkeypress = e => {
+    document.onkeypress =function (e) {
         if(e.key == 39) {
             playerX += 2;
         } else if(e.key == 37){

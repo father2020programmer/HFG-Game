@@ -2,13 +2,13 @@ $(() => {
     function draw(){
         $(canvas).clearCanvas();
         drawFloor();
-        drawDrop();
-        dropFall();
+        drawDrop1();
+        drawDrop2();      
         drawPlayer();
-        movePlayer();
+        //movePlayer();
     }
 
-    setInterval(draw, 20);
+    setInterval(draw, 10);
     
 })
 
