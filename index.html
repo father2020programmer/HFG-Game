@@ -20,9 +20,14 @@
   <div class="container">
 
     <!-- title screen -->
-    <div class="titleScreen" id="titleScreen">    
+    <div class="titleScreen show" id="titleScreen">    
       <h1>Help the Plant Grow!</h1>
       <button id="startBtn">Start</button>    
+    </div>
+
+    <div class="endScreen" id="endScreen">    
+      <h1 id="endMessage"></h1>
+      <button id="restartBtn">restart</button>    
     </div>
       
     <!-- Cloud formation -->
@@ -33,9 +38,10 @@
       <div><i class="fas fa-cloud clouds"></i></div>
     </div>   
   
-    <canvas id="canvas" width="1000" height="1000"></canvas>  
-
+    <canvas id="canvas" width="1000" height="1000"></canvas>
+    
   </div>
+
       
 
     

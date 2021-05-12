@@ -1,3 +1,10 @@
+
+
+//////// Draw functions of Game///////////////////////
+
+
+//// Game floor ///////
+
 function drawFloor(){
     $(canvas).drawRect({
         fillStyle: 'black',
@@ -7,6 +14,7 @@ function drawFloor(){
     });
 }
 
+/////// Score Lives and Level /////
 function drawScore(){
     $(canvas).drawText({
         fillStyle: '#000',
@@ -34,6 +42,8 @@ function drawLevels(){
     });
 }
 
+///////// Pot for Player to Control ////////////
+
 function drawPlayer(){
     $(canvas).drawRect({
         fillStyle: '#ed9715',
@@ -52,45 +62,26 @@ function drawPlayer(){
     });
 }
 
-function drawDrop1(m){
-    
-    $(canvas).drawEllipse({
-        fillStyle: '#1445d9',
-        x: drop[m].xp, y: drop[m].yp,
-        width: 8, height: 30,
-        });
-
-        let info = drop[m].yp;
-
+/////// Rain drop /////////////
+function drawDrop1(){
+    for(let d=0; d<drop.length; d++){
+        $(canvas).drawEllipse({
+            fillStyle: '#1445d9',
+            x: drop[d].xp, y: drop[d].yp,
+            width: 8, height: 30,
+            });
+        let info = drop[d].yp;    
         if(info > 940){
-            drop[m].yp = starty;
-            makeRandomNum();
+            lives -= 1;
+            drop.pop();
         } else{
-            drop[m].yp += .95;
+            drop[d].yp += dropSpeed;
         }           
-    
-}
-
-function drawDrop2(m){
-
         
-    $(canvas).drawEllipse({
-        fillStyle: '#1445d9',
-        x: drop[m].xp, y: drop[m].yp,
-        width: 8, height: 30,
-        });
-
-        let info = drop[m].yp;
-
-        if(info > 940){
-            drop[m].yp = starty;
-            makeRandomNum();
-        } else{
-            drop[m].yp += 1.02;
-        }
-    
+    }
 }
 
+//////// Drawing of Plant levels 1-3 //////////
 function drawPlant1(){
     $(canvas).drawRect({
         fillStyle: '#26ab09',

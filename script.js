@@ -1,19 +1,36 @@
-$(() => {
-    function draw(){
-        $(canvas).clearCanvas();
-        drawScore();
-        drawLives();
-        drawLevels();
-        drawFloor();
-        //drawDrop1(lastNum);
-        //drawDrop2(newNum);      
-        drawPlayer();        
-        ifScored();
-        drawPlantLeves();
+
+/////// Main Script of Game ////////////////
+
+
+$('#startBtn').click(function(){
+    $(titleScreen).removeClass('show');
+    startGame();
+});
+
+$('#restartBtn').click(function(){
+    $(endScreen).removeClass('show');
+    startGame();    
+});
+
+$(document).keydown(function (e){
+    if(e.key === 'ArrowLeft' || e.key === 'a'){
+        playerX -= playerSpeed;
+    } else if(e.key === 'ArrowRight' || e.key === 'd'){
+        playerX += playerSpeed;
     }
+});
 
 
-    let gameInterval = setInterval(draw, 1);
-    //let numInterval = setInterval(makeRandomNum, 3000);
-})
-
+function draw(){
+    $(canvas).clearCanvas();
+    drawScore();
+    drawLives();
+    drawLevels();
+    drawFloor();              
+    drawPlayer();        
+    ifScored();
+    drawPlantLevels();
+    drawDrop1();
+    endOfLives();
+    winGame();        
+}
